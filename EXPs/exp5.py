@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
 from scipy.stats import pearsonr
+from sklearn.inspection import DecisionBoundaryDisplay
+
 sns.set(style="dark", color_codes=True)
 
 dataset = pd.read_csv("datasets/Iris.csv")
