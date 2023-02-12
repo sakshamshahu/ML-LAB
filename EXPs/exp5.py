@@ -28,7 +28,7 @@ print(model.score(X_test,Y_test)*100,'%')
 
 # sns.residplot(x='Species' , y='PetalLengthCm', data=num_dataset )
 # plt.show()
-g2 = sns.regplot(x='SepalLengthCm', y='PetalLengthCm', logistic=True,
+g2 = sns.regplot(x='SepalLengthCm', y='Species', logistic=True,
    n_boot=750, y_jitter=.03, data=num_dataset,
    line_kws={'color': 'r'})
 plt.show();
