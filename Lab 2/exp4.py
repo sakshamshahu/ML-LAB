@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 #import statsmodel as sm using which you can create variables x and y 
-dataset = pd.read_csv('datasets/Summary of Weather.csv')
+dataset = pd.read_csv('Summary of Weather.csv')
 
 X = np.array(dataset['MinTemp']).reshape(-1,1)
 print(X)

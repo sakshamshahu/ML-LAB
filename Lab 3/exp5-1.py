@@ -3,12 +3,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import datasets
 from sklearn.inspection import DecisionBoundaryDisplay
 
-# import some data to play with
+# importing the required dataset 
 iris = datasets.load_iris()
-X = iris.data[:, :2]  # we only take the first two features.
+X = iris.data[:, :2]  # taking sepal width and length into account 
 Y = iris.target
 
-# Create an instance of Logistic Regression Classifier and fit the data.
+# Creating an instance of Logistic Regression Classifier and fitting the data.
 logreg = LogisticRegression(C=1e5)
 logreg.fit(X, Y)
 
@@ -26,7 +26,7 @@ DecisionBoundaryDisplay.from_estimator(
     eps=0.5,
 )
 
-# Plot also the training points
+# Plotting the training points
 plt.scatter(X[:, 0], X[:, 1], c=Y, edgecolors="k", cmap=plt.cm.Paired)
 
 

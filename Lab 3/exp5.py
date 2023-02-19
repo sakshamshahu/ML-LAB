@@ -12,7 +12,7 @@ from sklearn.inspection import DecisionBoundaryDisplay
 
 sns.set(style="dark", color_codes=True)
 
-dataset = pd.read_csv("datasets/Iris.csv")
+dataset = pd.read_csv("Iris.csv")
 dataset = dataset.drop(columns= "Id")
 num_dataset =dataset.copy()
 label = LabelEncoder()
@@ -28,7 +28,7 @@ print(model.score(X_test,Y_test)*100,'%')
 
 # sns.residplot(x='Species' , y='PetalLengthCm', data=num_dataset )
 # plt.show()
-g2 = sns.regplot(x='SepalLengthCm', y='Species', logistic=True,
+g2 = sns.regplot(x='PetalLengthCm', y='Species', logistic=True,
    n_boot=750, y_jitter=.03, data=num_dataset,
    line_kws={'color': 'r'})
 plt.show();
